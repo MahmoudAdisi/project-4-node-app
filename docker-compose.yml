@@ -1,5 +1,5 @@
 services:
- node-app:
+  node-app:
     image: mahmoudadisi1/project-2-node-app
     env_file:
       - ./.env 
