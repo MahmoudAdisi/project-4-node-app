@@ -34,7 +34,7 @@ mongoose
 app.get('/', (req, res) => {
     res.send(`
         <h1>Welcome to my project V1 !</h1>
-        <p>The project is set up using:</p>
+        <p>i used Docker Swarm :</p>
         <ul>
             <li>Node.js with Express.js for the server</li>
             <li>MongoDB for data storage</li>

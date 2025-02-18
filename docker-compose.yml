@@ -1,14 +1,16 @@
 services:
-  node-app:
-    container_name: webhotreloade
+ node-app:
     image: mahmoudadisi1/project-2-node-app
-    build: .
-    volumes:
-      - ./src:/app/src:ro
-    ports:
-      - "4000:4000"
     env_file:
       - ./.env 
+    deploy:
+      replicas: 6
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+        delay: 10s
     depends_on:
       - mongo
       - redis
